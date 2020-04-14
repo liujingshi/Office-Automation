@@ -11,7 +11,7 @@
  Target Server Version : 100410
  File Encoding         : 65001
 
- Date: 12/04/2020 14:20:25
+ Date: 14/04/2020 19:56:50
 */
 
 SET NAMES utf8mb4;
@@ -37,7 +37,12 @@ CREATE TABLE `dep`  (
   `dep_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`dep_id`) USING BTREE,
   UNIQUE INDEX `only`(`dep_name`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of dep
+-- ----------------------------
+INSERT INTO `dep` VALUES (1, '总系统');
 
 -- ----------------------------
 -- Table structure for file
@@ -58,10 +63,23 @@ CREATE TABLE `info`  (
   `info_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `info_datetime` datetime(0) NOT NULL,
+  `info_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `info_text` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `file_id` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`info_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of info
+-- ----------------------------
+INSERT INTO `info` VALUES (1, 1, '2020-04-14 15:15:07', '这是一个公告', '公告 公告公告公告公告公告公告 公告公告公告公告公告公告 公告公告公告公告公告公告 公告公告公告公告公告', 0);
+INSERT INTO `info` VALUES (2, 1, '2020-04-14 15:16:06', '超级公告', '超级公告超级公告超级公告超级公告超级公告超级公告超级公告超级公告超级公告超级公告', 0);
+INSERT INTO `info` VALUES (3, 1, '2020-04-14 16:50:53', '这是一个啦啦啦公告', '这是一个啦啦啦公告', 0);
+INSERT INTO `info` VALUES (4, 1, '2020-04-14 17:09:38', '震惊！24岁小伙在公园竟然对80岁大妈做出这样的事情...', '哈哈哈哈，你没有猜错，我就是UC震惊部的！', 0);
+INSERT INTO `info` VALUES (5, 1, '2020-04-14 19:51:42', '震惊！', '震惊！！！', 0);
+INSERT INTO `info` VALUES (6, 1, '2020-04-14 19:53:59', '21341212', '421342342', 0);
+INSERT INTO `info` VALUES (7, 1, '2020-04-14 19:54:58', '2435435', '345635', 0);
+INSERT INTO `info` VALUES (8, 1, '2020-04-14 19:55:30', '678967997', '67868766', 0);
 
 -- ----------------------------
 -- Table structure for msg
@@ -86,7 +104,12 @@ CREATE TABLE `pos`  (
   `pos_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`pos_id`) USING BTREE,
   UNIQUE INDEX `only`(`pos_name`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pos
+-- ----------------------------
+INSERT INTO `pos` VALUES (1, '系统管理员');
 
 -- ----------------------------
 -- Table structure for power
@@ -134,6 +157,11 @@ CREATE TABLE `user`  (
   `dep_id` int(11) NOT NULL,
   `pos_id` int(11) NOT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (1, 'oH2t55PU9U4um_VfDBAmaNm0fGh8', 'Handsome grows old quickly', 'https://wx.qlogo.cn/mmopen/vi_32/9SHJBXhNkvOW04uoqboOnBeibv7W454usnGhkySapAIJHEbdNj3XE45ia4SzjicnCFjL8jCf6l1I0wqkfXXiceVgibw/132', 1, 1, 1);
 
 SET FOREIGN_KEY_CHECKS = 1;

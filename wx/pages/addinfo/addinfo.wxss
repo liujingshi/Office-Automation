@@ -1,0 +1,13 @@
+/* pages/addinfo/addinfo.wxss */
+.text {
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+.add {
+    width: 100%;
+}
+
+.v {
+    width: 100%;
+}

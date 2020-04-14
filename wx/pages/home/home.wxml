@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<view>
+	<view>
+		<van-card num="" price="" desc="" title="{{userInfo.nickName}}" thumb="{{userInfo.avatarUrl}}" />
+	</view>
+	<view>
+		<van-notice-bar left-icon="volume-o" text="{{newInfo}}" />
+	</view>
+	<view>
+		<van-grid square column-num="4">
+			<van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" info="{{item.info}}" text="{{item.text}}" wx:for="{{grid}}" />
+		</van-grid>
+	</view>
+</view>

@@ -1,0 +1,9 @@
+/* pages/info/info.wxss */
+
+.panel-item {
+    margin: 20px 0;
+}
+
+.panel-content {
+    padding: 20px;
+}

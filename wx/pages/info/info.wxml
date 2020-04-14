@@ -1,0 +1,8 @@
+<!--pages/info/info.wxml-->
+<view>
+	<view class="panel-item" wx:for="{{info}}">
+		<van-panel title="{{item.info_title}}" desc="{{item.info_datetime}}">
+			<view class="panel-content">{{item.info_text}}</view>
+		</van-panel>
+	</view>
+</view>

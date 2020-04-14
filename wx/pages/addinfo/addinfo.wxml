@@ -1,0 +1,9 @@
+<!--pages/addinfo/addinfo.wxml-->
+<view class="v">
+	<van-cell-group>
+		<van-field value="{{title}}" bind:change="setTitle" required clearable label="标题" placeholder="请输入标题" />
+	</van-cell-group>
+    <textarea class="text" auto-height value="{{text}}" bindinput="setText" maxlength="-1" placeholder="请输入内容"></textarea>
+    <van-button class="add" type="primary" bind:click="onAdd">发布</van-button>
+</view>
+<van-toast id="van-toast" />
