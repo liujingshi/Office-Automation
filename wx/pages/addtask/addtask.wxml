@@ -1,0 +1,15 @@
+<!--pages/addtask/addtask.wxml-->
+<view class="v">
+	<van-cell-group>
+		<van-field value="{{title}}" bind:change="setTitle" required clearable label="名称" placeholder="请输入任务名称" />
+	</van-cell-group>
+	<van-notice-bar left-icon="info-o" text="请选择附件或上传后选择附件(非必选)" />
+	<van-dropdown-menu>
+		<van-dropdown-item bind:change="setFileId" value="{{file_id}}" options="{{file}}" />
+	</van-dropdown-menu>
+	<van-button type="info" bind:click="upload">上传附件</van-button>
+	<van-notice-bar left-icon="info-o" text="请输入任务内容" />
+	<textarea class="text" auto-height value="{{text}}" bindinput="setText" maxlength="-1" placeholder="请输入内容"></textarea>
+	<van-button type="primary" bind:click="onAdd">发布</van-button>
+</view>
+<van-toast id="van-toast" />

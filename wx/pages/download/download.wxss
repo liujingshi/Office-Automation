@@ -1,0 +1,4 @@
+/* pages/download/download.wxss */
+.v {
+    margin: 10px 0;
+}

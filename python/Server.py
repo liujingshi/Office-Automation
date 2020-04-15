@@ -42,6 +42,12 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
             Utils.getInfo(self)
         elif action == "addInfo":
             Utils.insertInfo(self, obj)
+        elif action == "delInfo":
+            Utils.deleteInfo(self, obj)
+        elif action == "getFile":
+            Utils.getFile(self)
+        elif action == "addTask":
+            Utils.insertTask(self, obj)
         
 
 

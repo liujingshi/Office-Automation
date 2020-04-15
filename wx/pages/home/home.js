@@ -35,9 +35,27 @@ Page({
             },
             {
                 text: "发布公告",
-                icon: "notes-o",
+                icon: "volume",
                 info: "",
                 url: "/pages/addinfo/addinfo"
+            },
+            {
+                text: "文件上传",
+                icon: "upgrade",
+                info: "",
+                url: "/pages/upload/upload"
+            },
+            {
+                text: "文件下载",
+                icon: "down",
+                info: "",
+                url: "/pages/download/download"
+            },
+            {
+                text: "发布任务",
+                icon: "todo-list",
+                info: "",
+                url: "/pages/addtask/addtask"
             }
         ]
     },

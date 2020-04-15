@@ -5,6 +5,7 @@ import logging
 from ljsmysql import Ljsmysql
 import time
 from common import JsonToDatetime
+import shutil
 
 Ljsmysql.connect()
 
@@ -69,3 +70,24 @@ def insertInfo(tornadoSelf, obj):
     obj['info_datetime'] = datetime
     Ljsmysql.table("info").insert(obj)
     sendMsg(tornadoSelf, "addInfoSuccess")
+
+
+# 删除公告
+def deleteInfo(tornadoSelf, obj):
+    infoId = obj['info_id']
+    Ljsmysql.table("info").where("info_id", infoId).delete()
+    sendMsg(tornadoSelf, "delInfoSuccess")
+
+
+# 获取文件列表
+def getFile(tornadoSelf):
+    files = Ljsmysql.table("file").order("file_id desc").select()
+    sendMsg(tornadoSelf, "files", files)
+
+
+# 发布任务
+def insertTask(tornadoSelf, obj):
+    user = Ljsmysql.table("user").where("open_id", tornadoSelf.openid).select()
+    obj['from_user_id'] = user[0]['user_id']
+    Ljsmysql.table("task").insert(obj)
+    sendMsg(tornadoSelf, "addTaskSuccess")

@@ -1,0 +1,613 @@
+---------------------------------------------------------------
+[ 2020-04-15T14:20:31+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[ error ] [0]语法解析错误: syntax error, unexpected '{'
+---------------------------------------------------------------
+[ 2020-04-15T14:22:45+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[运行时间：0.022164s] [吞吐率：45.12req/s] [内存消耗：56.36kb] [文件加载：35]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-type' => 'multipart/form-data; boundary=--------------------------037013824801597329398059',
+  'content-length' => '1737382',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'title' => '个人简历',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '{'[E:\code\git\Office-Automation\www\application\upload\controller\Index.php:14]
+---------------------------------------------------------------
+[ 2020-04-15T14:24:07+08:00 ] 0.0.0.0 GET www.wlj.com/upload
+[运行时间：0.017851s] [吞吐率：56.02req/s] [内存消耗：56.66kb] [文件加载：35]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wlj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=6711271424; pgv_si=s4455176192',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '{'[E:\code\git\Office-Automation\www\application\upload\controller\Index.php:14]
+---------------------------------------------------------------
+[ 2020-04-15T14:24:24+08:00 ] 0.0.0.0 GET www.wlj.com/upload
+[运行时间：0.011393s] [吞吐率：87.77req/s] [内存消耗：71.45kb] [文件加载：33]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wlj.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=6711271424; pgv_si=s4455176192',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\upload\controller\Index->index[ E:\code\git\Office-Automation\www\application\upload\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-04-15T14:24:31+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[运行时间：0.102255s] [吞吐率：9.78req/s] [内存消耗：227.29kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-type' => 'multipart/form-data; boundary=--------------------------830647259066282982390349',
+  'content-length' => '1737382',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'title' => '个人简历',
+)
+[ info ] [ RUN ] app\upload\controller\Index->index[ E:\code\git\Office-Automation\www\application\upload\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005598s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.013029s ]
+[ sql ] [ SQL ] INSERT INTO `file` (`file_name` , `file_path`) VALUES ('个人简历' , '20200415\\07ef9eea1b1ff6475976f197f5c25362.docx') [ RunTime:0.002502s ]
+---------------------------------------------------------------
+[ 2020-04-15T14:26:58+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[运行时间：0.037242s] [吞吐率：26.85req/s] [内存消耗：162.29kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-type' => 'multipart/form-data; boundary=--------------------------739645292841392259488492',
+  'content-length' => '429',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'title' => '文件啦',
+)
+[ info ] [ RUN ] app\upload\controller\Index->index[ E:\code\git\Office-Automation\www\application\upload\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001780s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011732s ]
+[ sql ] [ SQL ] INSERT INTO `file` (`file_name` , `file_path`) VALUES ('文件啦' , '20200415\\e9b4a9d2046e8ec0873303e2782fa657.txt') [ RunTime:0.000646s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:05:45+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[运行时间：0.043715s] [吞吐率：22.88req/s] [内存消耗：162.35kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-type' => 'multipart/form-data; boundary=--------------------------139614650232761131476431',
+  'content-length' => '158467',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'title' => '又是新文件',
+)
+[ info ] [ RUN ] app\upload\controller\Index->index[ E:\code\git\Office-Automation\www\application\upload\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001937s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011663s ]
+[ sql ] [ SQL ] INSERT INTO `file` (`file_name` , `file_path`) VALUES ('又是新文件\\jpg' , '20200415\\5c52f301090ca800126759e0d5dd5f9f.jpg') [ RunTime:0.000741s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:17:22+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.042998s] [吞吐率：23.26req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002117s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.015112s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.004117s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:20:29+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.033888s] [吞吐率：29.51req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001727s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011378s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000725s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:21:46+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.029379s] [吞吐率：34.04req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001759s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011516s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000672s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:23:13+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.043915s] [吞吐率：22.77req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011839s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011244s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000762s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:23:44+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.039941s] [吞吐率：25.04req/s] [内存消耗：328.95kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012285s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011527s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000799s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:27:05+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.047503s] [吞吐率：21.05req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012339s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.012890s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.001093s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:27:28+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=2
+[运行时间：0.029497s] [吞吐率：33.90req/s] [内存消耗：183.32kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '2',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001748s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011738s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 2 [ RunTime:0.000791s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:29:25+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.058709s] [吞吐率：17.03req/s] [内存消耗：186.36kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001833s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011949s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:29:50+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=2
+[运行时间：0.028903s] [吞吐率：34.60req/s] [内存消耗：185.13kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '2',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001766s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011567s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 2 [ RunTime:0.000757s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:38:19+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.046765s] [吞吐率：21.38req/s] [内存消耗：324.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012601s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.012539s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000912s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:39:32+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=3
+[运行时间：0.028731s] [吞吐率：34.81req/s] [内存消耗：323.34kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001778s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011293s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000802s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:39:49+08:00 ] 0.0.0.0 GET www.wlj.com/download?file_id=3
+[运行时间：0.028713s] [吞吐率：34.83req/s] [内存消耗：323.89kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wlj.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=6711271424; pgv_si=s4455176192',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '3',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001835s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011354s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 3 [ RunTime:0.000810s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:45:03+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=1
+[运行时间：0.036750s] [吞吐率：27.21req/s] [内存消耗：1,867.34kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '1',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001988s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.011639s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 1 [ RunTime:0.000827s ]
+---------------------------------------------------------------
+[ 2020-04-15T15:45:52+08:00 ] 127.0.0.1 GET www.wlj.com/download?file_id=1
+[运行时间：0.035265s] [吞吐率：28.36req/s] [内存消耗：1,867.34kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'download',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-length' => '0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'file_id' => '1',
+)
+[ info ] [ RUN ] app\download\controller\Index->index[ E:\code\git\Office-Automation\www\application\download\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001794s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.013136s ]
+[ sql ] [ SQL ] SELECT * FROM `file` WHERE  `file_id` = 1 [ RunTime:0.000904s ]
+---------------------------------------------------------------
+[ 2020-04-15T16:49:26+08:00 ] 127.0.0.1 POST www.wlj.com/upload
+[运行时间：0.041561s] [吞吐率：24.06req/s] [内存消耗：162.66kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Office-Automation\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx9097c11448b32173/devtools/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.2004020 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'www.wlj.com',
+  'content-type' => 'multipart/form-data; boundary=--------------------------920336336156870418917857',
+  'content-length' => '381412',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'title' => '就是这个附件了',
+)
+[ info ] [ RUN ] app\upload\controller\Index->index[ E:\code\git\Office-Automation\www\application\upload\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001982s ] mysql:host=127.0.0.1;dbname=oa;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `file` [ RunTime:0.012406s ]
+[ sql ] [ SQL ] INSERT INTO `file` (`file_name` , `file_path`) VALUES ('就是这个附件了.pdf' , '20200415\\cb162d1b9682ac70d4c6d2c803f888ea.pdf') [ RunTime:0.000814s ]

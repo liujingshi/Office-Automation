@@ -1,0 +1,11 @@
+<!--pages/download/download.wxml-->
+<view>
+	<view class="v" wx:for="{{file}}">
+		<van-card title="{{item.file_name}}" thumb="/images/file.png">
+			<view slot="footer">
+				<van-button data-file_path="{{item.file_path}}" bind:click="dowmload" size="small" type="info">下载</van-button>
+			</view>
+		</van-card>
+	</view>
+</view>
+<van-toast id="van-toast" />
