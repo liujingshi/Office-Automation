@@ -1,0 +1,5 @@
+<!--pages/users/users.wxml-->
+<view>
+	<mytree model="{{data}}" bind:tapitem='tapItem'></mytree>
+</view>
+<van-dialog id="van-dialog" />

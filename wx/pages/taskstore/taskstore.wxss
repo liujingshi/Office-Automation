@@ -1,0 +1,9 @@
+/* pages/taskstore/taskstore.wxss */
+
+.panel-item {
+    margin: 20px 0;
+}
+
+.panel-content {
+    padding: 20px;
+}

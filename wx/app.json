@@ -6,7 +6,20 @@
         "pages/addinfo/addinfo",
         "pages/upload/upload",
         "pages/download/download",
-        "pages/addtask/addtask"
+        "pages/addtask/addtask",
+        "pages/adddep/adddep",
+        "pages/addpos/addpos",
+        "pages/message/message",
+        "pages/friends/friends",
+        "pages/task/task",
+        "pages/taskstore/taskstore",
+        "pages/users/users",
+        "pages/components/mytree/mytree",
+        "pages/dotask/dotask",
+        "pages/checktask/checktask",
+        "pages/ctask/ctask",
+        "pages/userlist/userlist",
+        "pages/edituser/edituser"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -28,6 +41,9 @@
         "van-uploader": "@vant/weapp/uploader/index",
         "van-picker": "@vant/weapp/picker/index",
         "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
-        "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+        "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+        "van-collapse": "@vant/weapp/collapse/index",
+        "van-collapse-item": "@vant/weapp/collapse-item/index",
+        "van-dialog": "@vant/weapp/dialog/index"
     }
 }

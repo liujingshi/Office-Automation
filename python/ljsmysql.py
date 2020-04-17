@@ -26,13 +26,15 @@ class Ljsmysql:
     @staticmethod
     def exec(sql):
         # print(sql)
-        try:
-            Ljsmysql.cursor.execute(sql)
-            return True
-        except:
-            Ljsmysql.db.rollback()
-            print("sql error: {0}".format(sql))
-            return False
+        while True:
+            try:
+                Ljsmysql.cursor.execute(sql)
+                return True
+            except:
+                Ljsmysql.db.ping(True)
+                Ljsmysql.db.rollback()
+                print("sql error: {0}".format(sql))
+                return False
 
 
 class Table:
@@ -48,7 +50,7 @@ class Table:
                 tmpList = []
                 for k, v in p1.items():
                     tmpList.append("{0} = '{1}'".format(k, v))
-                self.whereSql = "where {0}".format(",".join(tmpList))
+                self.whereSql = "where {0}".format(" and ".join(tmpList))
             if isinstance(p1, list):
                 tmpList = []
                 for p in p1:
@@ -56,7 +58,7 @@ class Table:
                         tmpList.append("{0} = '{1}'".format(p[0], p[1]))
                     if len(p) == 3:
                         tmpList.append("{0} {1} '{2}'".format(p[0], p[1], p[2]))
-                self.whereSql = "where {0}".format(",".join(tmpList))
+                self.whereSql = "where {0}".format(" and ".join(tmpList))
         if p2 != False and p3 == False:
             self.whereSql = "where {0} = '{1}'".format(p1, p2)
         if p3 != False:

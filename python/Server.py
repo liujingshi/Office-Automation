@@ -18,26 +18,32 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
 
     def open(self):  # WebSocket建立时调用
         openid = Utils.getOpenid(self.get_argument("code"))
-        self.openid = openid
-        MainSocketHandler.clients[openid] = {"openid": openid, "object": self}
-        logging.info("User {0} connected".format(openid))
+        if openid == "noopenid":
+            self.close()
+        else:
+            self.openid = openid
+            MainSocketHandler.clients[openid] = {"openid": openid, "object": self}
+            logging.info("User {0} connected".format(openid))
 
     def on_close(self):  # WebSocket断开连接时调用
-        if self.openid in MainSocketHandler.clients:
-            del MainSocketHandler.clients[self.openid]
-            logging.info("User {0} disconnected".format(self.openid))
+        try:
+            if self.openid in MainSocketHandler.clients:
+                del MainSocketHandler.clients[self.openid]
+                logging.info("User {0} disconnected".format(self.openid))
+        except:
+            pass
 
     def on_message(self, message):  # 收到WebSocket消息时调用
         data = json.loads(message)
-        logging.info("Get message from {0} => {1}".format(self.openid, message))
+        # logging.info("Get message from {0} => {1}".format(self.openid, message))
         action = data['msg']
         obj = data['obj']
         if action == "nothing":
             Utils.sendMsg(self, "nothing", "Hello Socket")
         elif action == "updateUserInfo":
             Utils.updateUserInfo(self, obj)
-        elif action == "getNewInfo":
-            Utils.getNewInfo(self)
+        elif action == "getHome":
+            Utils.getHome(self)
         elif action == "getInfo":
             Utils.getInfo(self)
         elif action == "addInfo":
@@ -48,6 +54,36 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
             Utils.getFile(self)
         elif action == "addTask":
             Utils.insertTask(self, obj)
+        elif action == "getDep":
+            Utils.getDep(self)
+        elif action == "addDep":
+            Utils.insertDep(self, obj)
+        elif action == "getPos":
+            Utils.getPos(self)
+        elif action == "addPos":
+            Utils.insertPos(self, obj)
+        elif action == "getUsers":
+            Utils.getUsers(self)
+        elif action == "getTask":
+            Utils.getTask(self)
+        elif action == "getMyTask":
+            Utils.getMyTask(self)
+        elif action == "buyTask":
+            Utils.buyTask(self, obj)
+        elif action == "getThisTask":
+            Utils.getThisTask(self, obj)
+        elif action == "doTask":
+            Utils.doTask(self, obj)
+        elif action == "checkTask":
+            Utils.checkTask(self, obj)
+        elif action == "getCheckTask":
+            Utils.getCheckTask(self)
+        elif action == "getThisCheckTask":
+            Utils.getThisCheckTask(self, obj)
+        elif action == "getUserlist":
+            Utils.getUserlist(self, obj)
+        elif action == "updateUserDP":
+            Utils.updateUserDP(self, obj)
         
 
 

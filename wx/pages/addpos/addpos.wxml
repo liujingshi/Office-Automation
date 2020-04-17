@@ -1,0 +1,16 @@
+<!--pages/addpos/addpos.wxml-->
+<view>
+	<van-cell-group>
+		<van-field value="{{name}}" bind:change="setName" required clearable label="名称" placeholder="请输入职位名称" />
+	</van-cell-group>
+	<van-button type="primary" bind:click="onAdd">确定新增</van-button>
+</view>
+<view>
+	<van-divider contentPosition="center" customStyle="color: #1989fa;border-color: #1989fa;font-size: 18px;">职位列表</van-divider>
+	<van-divider />
+	<view wx:for="{{pos}}">
+		<van-divider dashed contentPosition="center">{{item.pos_name}}</van-divider>
+		<van-divider />
+	</view>
+</view>
+<van-toast id="van-toast" />

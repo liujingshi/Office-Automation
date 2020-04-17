@@ -1,0 +1,12 @@
+<!--pages/adddep/adddep.wxml-->
+<view>
+    <van-notice-bar left-icon="info-o" text="请选择上级部门" />
+	<van-dropdown-menu>
+		<van-dropdown-item bind:change="setUpId" value="{{upId}}" options="{{dep}}" />
+	</van-dropdown-menu>
+    <van-cell-group>
+		<van-field value="{{name}}" bind:change="setName" required clearable label="名称" placeholder="请输入部门名称" />
+	</van-cell-group>
+    <van-button type="primary" bind:click="onAdd">确定新增</van-button>
+</view>
+<van-toast id="van-toast" />

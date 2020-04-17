@@ -1,0 +1,24 @@
+<!--pages/dotask/dotask.wxml-->
+<view class="v">
+	<view class="panel-item">
+		<van-panel title="{{task.task_title}}" desc="{{task.user_name}}" status="{{task.task_status_name}}" use-footer-slot>
+			<view class="panel-content">{{task.task_text}}</view>
+			<van-card wx:if="{{task.task_file_id > 0}}" title="{{task.file_name}}" thumb="/images/file.png">
+				<view slot="footer">
+					<van-button data-file_path="{{task.file_path}}" bind:click="open" size="small" type="primary">打开</van-button>
+				</view>
+			</van-card>
+			<van-notice-bar left-icon="info-o" text="请选择附件或上传后选择附件(非必选)" />
+			<van-dropdown-menu>
+				<van-dropdown-item bind:change="setFileId" value="{{file_id}}" options="{{file}}" />
+			</van-dropdown-menu>
+			<van-button type="primary" bind:click="upload" size="small">上传附件</van-button>
+			<van-notice-bar left-icon="info-o" text="请输入要提交内容" />
+			<textarea class="text" auto-height value="{{text}}" bindinput="setText" maxlength="-1" placeholder="请输入提交内容"></textarea>
+			<view slot="footer">
+				<van-button bind:click="doTask" data-task_id="{{task.task_id}}" size="small" type="info">提交任务</van-button>
+			</view>
+		</van-panel>
+	</view>
+</view>
+<van-toast id="van-toast" />

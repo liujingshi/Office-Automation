@@ -1,0 +1,12 @@
+<!--pages/checktask/cheaktask.wxml-->
+<view>
+	<view class="panel-item" wx:for="{{task}}">
+		<van-panel title="{{item.task_title}}" desc="{{item.user_name}}" status="{{item.task_status_name}}" use-footer-slot>
+			<view class="panel-content">{{item.task_text}}</view>
+			<view slot="footer">
+				<van-button bind:click="checkTask" data-task_id="{{item.task_id}}" size="small" type="info">检查任务</van-button>
+			</view>
+		</van-panel>
+	</view>
+</view>
+<van-toast id="van-toast" />

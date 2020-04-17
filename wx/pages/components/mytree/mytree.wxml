@@ -1,0 +1,6 @@
+<!--pages/components/mytree/mytree.wxml-->
+<van-collapse wx:for="{{model}}" value="{{activeNames}}" bind:change="onChange">
+	<van-collapse-item bindtap="tapitem" data-itemid="{{item.id}}" title="{{item.name}}" name="{{item.id}}">
+		<mytree wx:if="{{item.children.length > 0}}" model="{{item.children}}"></mytree>
+	</van-collapse-item>
+</van-collapse>

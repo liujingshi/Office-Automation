@@ -56,7 +56,6 @@ Page({
     },
     toHome: function () {
         app.sendSocketMsg("updateUserInfo", {
-            user_name: app.globalData.userInfo.nickName,
             user_head: app.globalData.userInfo.avatarUrl
         })
         wx.redirectTo({

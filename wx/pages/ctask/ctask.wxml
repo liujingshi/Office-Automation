@@ -1,0 +1,20 @@
+<!--pages/ctask/ctask.wxml-->
+<view class="v">
+	<view class="panel-item">
+		<van-panel title="{{task.task_title}}" desc="{{task.user_name}}" status="{{task.task_status_name}}" use-footer-slot>
+			<view class="panel-content">{{task.task_ok_text}}</view>
+			<van-card wx:if="{{task.task_ok_file_id > 0}}" title="{{task.file_name}}" thumb="/images/file.png">
+				<view slot="footer">
+					<van-button data-file_path="{{task.file_path}}" bind:click="open" size="small" type="info">打开</van-button>
+				</view>
+			</van-card>
+			<van-notice-bar left-icon="info-o" text="请输入要通过或驳回的内容" />
+			<textarea class="text" auto-height value="{{text}}" bindinput="setText" maxlength="-1" placeholder="请输入通过或驳回的内容"></textarea>
+			<view slot="footer">
+				<van-button bind:click="checkTaskFail" size="small" type="danger">驳回</van-button>
+				<van-button bind:click="checkTaskSuccess" size="small" type="primary">通过</van-button>
+			</view>
+		</van-panel>
+	</view>
+</view>
+<van-toast id="van-toast" />

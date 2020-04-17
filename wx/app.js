@@ -46,10 +46,23 @@ App({
             })
         }
     },
+    dowmloadAndOpenDocument: function (filePath) {
+        wx.downloadFile({
+            url: this.globalData.requestUrl + "files/" + filePath,
+            success: (result) => {
+                wx.openDocument({
+                    filePath: result.tempFilePath,
+                    success: (res) => {
+                        
+                    }
+                })
+            },
+        })
+    },
     globalData: {
         userInfo: null,
-        requestUrl: "http://www.wlj.com/",
-        socketUrl: "ws://127.0.0.1:8888/",
+        requestUrl: "https://www.wenlijie.com/",
+        socketUrl: "wss://www.wenlijie.com/wss",
         socketConnectStatus: false
     },
     objectData: {

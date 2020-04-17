@@ -1,0 +1,12 @@
+<!--pages/taskstore/taskstore.wxml-->
+<view>
+	<view class="panel-item" wx:for="{{task}}">
+		<van-panel title="{{item.task_title}}" desc="{{item.user_name}}" status="{{item.task_status_name}}" use-footer-slot>
+			<view class="panel-content">{{item.task_text}}</view>
+			<view slot="footer">
+				<van-button size="small" data-task_id="{{item.task_id}}" bind:click="onClick" type="danger">领取</van-button>
+			</view>
+		</van-panel>
+	</view>
+</view>
+<van-toast id="van-toast" />
