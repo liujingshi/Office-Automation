@@ -8,7 +8,7 @@
 					<van-button data-file_path="{{item.file_path}}" bind:click="open" size="small" type="primary">打开</van-button>
 				</view>
 			</van-card>
-			<view slot="footer">
+			<view slot="footer" wx:if="{{item.task_status_no != 3}}">
 				<van-button bind:click="doTask" data-task_id="{{item.task_id}}" size="small" type="info">做任务</van-button>
 			</view>
 		</van-panel>

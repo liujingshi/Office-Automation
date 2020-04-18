@@ -1,2 +1,12 @@
 <!--pages/edituser/edituser.wxml-->
-<text>pages/edituser/edituser.wxml</text>
+<view class="v">
+	<van-dropdown-menu>
+		<van-dropdown-item bind:change="setDep" value="{{dep_id}}" options="{{dep}}" />
+        <van-dropdown-item bind:change="setPos" value="{{pos_id}}" options="{{pos}}" />
+	</van-dropdown-menu>
+	<van-cell-group>
+		<van-field value="{{name}}" bind:change="setName" required clearable label="姓名" placeholder="请输入姓名" />
+	</van-cell-group>
+	<van-button type="info" bind:click="onClick">修改</van-button>
+</view>
+<van-toast id="van-toast" />

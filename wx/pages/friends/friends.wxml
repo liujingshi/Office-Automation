@@ -1,2 +1,4 @@
 <!--pages/friends/friends.wxml-->
-<text>pages/friends/friends.wxml</text>
+<van-cell-group>
+	<van-cell is-link wx:for="{{friends}}" title="{{item.user_name}}" link-type="navigateTo" url="/pages/chat/chat?userid={{item.cont_user_id}}" />
+</van-cell-group>

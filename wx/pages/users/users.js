@@ -6,7 +6,8 @@ const app = getApp()
 Page({
 
     data: {
-        data: []
+        data: [],
+        nowDepId: 0
     },
 
     onLoad: function (options) {
@@ -18,18 +19,31 @@ Page({
             this.onSocketMsg(JSON.parse(result.data))
         })
         app.sendSocketMsg("getUsers")
+        this.setData({
+            nowDepId: 0
+        })
     },
     tapItem: function (e) {
-        Dialog.confirm({
-            message: '是否查看改部门下用户?'
-        }).then(() => {
-            let depId = e.detail.itemid
-            wx.navigateTo({
-                url: '/pages/userlist/userlist?depid=' + depId
+        let depId = e.detail.itemid
+        if (this.data.nowDepId == 0) {
+            this.setData({
+                nowDepId: 1
             })
-        }).catch(() => {
-            // on cancel
-        })
+            Dialog.confirm({
+                message: '是否查看改部门下用户?'
+            }).then(() => {
+                this.setData({
+                    nowDepId: 0
+                })
+                wx.navigateTo({
+                    url: '/pages/userlist/userlist?depid=' + depId
+                })
+            }).catch(() => {
+                this.setData({
+                    nowDepId: 0
+                })
+            })
+        }
     },
     onSocketMsg: function (data) {
         let msg = data.msg;

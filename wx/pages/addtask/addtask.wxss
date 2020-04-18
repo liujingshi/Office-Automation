@@ -1,13 +1,1 @@
 /* pages/addtask/addtask.wxss */
-.text {
-    padding: 10px;
-    width: calc(100% - 20px);
-}
-
-.add {
-    width: 100%;
-}
-
-.v {
-    width: 100%;
-}

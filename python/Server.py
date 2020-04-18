@@ -4,7 +4,7 @@ import tornado.ioloop
 import logging
 import Utils
 import json
-import threading
+# import threading
 import time
 from tornado.options import define, options
 
@@ -38,52 +38,66 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
         # logging.info("Get message from {0} => {1}".format(self.openid, message))
         action = data['msg']
         obj = data['obj']
-        if action == "nothing":
+        if action == "nothing":  # 测试命令
             Utils.sendMsg(self, "nothing", "Hello Socket")
-        elif action == "updateUserInfo":
+        elif action == "updateUserInfo":  # 更新用户信息
             Utils.updateUserInfo(self, obj)
-        elif action == "getHome":
+        elif action == "getHome":  # 得到主页信息
             Utils.getHome(self)
-        elif action == "getInfo":
+        elif action == "getMyInfo":  # 得到自己信息
+            Utils.getMyInfo(self)
+        elif action == "getUserinfo":  # 得到用户信息
+            Utils.getUserinfo(self, obj)
+        elif action == "getInfo":  # 得到公告
             Utils.getInfo(self)
-        elif action == "addInfo":
+        elif action == "addInfo":  # 发布公告
             Utils.insertInfo(self, obj)
-        elif action == "delInfo":
+        elif action == "delInfo":  # 删除公告
             Utils.deleteInfo(self, obj)
-        elif action == "getFile":
+        elif action == "getFile":  # 得到文件
             Utils.getFile(self)
-        elif action == "addTask":
+        elif action == "addTask":  # 发布任务
             Utils.insertTask(self, obj)
-        elif action == "getDep":
+        elif action == "getDep":  # 得到部门
             Utils.getDep(self)
-        elif action == "addDep":
+        elif action == "addDep":  # 添加部门
             Utils.insertDep(self, obj)
-        elif action == "getPos":
+        elif action == "getPos":  # 得到职位
             Utils.getPos(self)
-        elif action == "addPos":
+        elif action == "addPos":  # 添加职位
             Utils.insertPos(self, obj)
-        elif action == "getUsers":
+        elif action == "getUsers":  # 得到部门架构
             Utils.getUsers(self)
-        elif action == "getTask":
+        elif action == "getTask":  # 得到任务大厅
             Utils.getTask(self)
-        elif action == "getMyTask":
+        elif action == "getMyTask":  # 得到我的任务
             Utils.getMyTask(self)
-        elif action == "buyTask":
+        elif action == "buyTask":  # 领取任务
             Utils.buyTask(self, obj)
-        elif action == "getThisTask":
+        elif action == "getThisTask":  # 得到任务详情
             Utils.getThisTask(self, obj)
-        elif action == "doTask":
+        elif action == "doTask":  # 做任务
             Utils.doTask(self, obj)
-        elif action == "checkTask":
+        elif action == "checkTask":  # 检查任务
             Utils.checkTask(self, obj)
-        elif action == "getCheckTask":
+        elif action == "getCheckTask":  # 得到检查的任务
             Utils.getCheckTask(self)
-        elif action == "getThisCheckTask":
+        elif action == "getThisCheckTask":  # 得到要检查的任务详情
             Utils.getThisCheckTask(self, obj)
-        elif action == "getUserlist":
+        elif action == "getUserlist":  # 得到用户列表
             Utils.getUserlist(self, obj)
-        elif action == "updateUserDP":
+        elif action == "updateUserDP":  # 更新用户信息
             Utils.updateUserDP(self, obj)
+        elif action == "addFriend":  # 添加好友
+            Utils.addFriend(self, obj)
+        elif action == "sendMessage":  # 发送消息
+            Utils.sendMessage(self, obj, MainSocketHandler.clients)
+        elif action == "getFriends":  # 得到通讯录
+            Utils.getFriends(self)
+        elif action == "getMessages":  # 得到消息列表
+            Utils.getMessages(self)
+        elif action == "getAllMessage":  # 得到所有消息
+            Utils.getAllMessage(self, obj)
         
 
 

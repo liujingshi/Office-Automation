@@ -8,10 +8,17 @@ App({
             success: res => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
                 wx.connectSocket({
-                    url: this.globalData.socketUrl + "?code=" + res.code
+                    url: this.globalData.socketUrl + "?code=" + res.code,
+                    header: {
+                        'content-type': 'application/json',
+                        'Authorization': null
+                    }
                 })
                 wx.onSocketOpen((result) => {
                     this.globalData.socketConnectStatus = true
+                })
+                wx.onSocketClose((result) => {
+                    this.globalData.socketConnectStatus = false
                 })
             }
         })
@@ -44,6 +51,15 @@ App({
                     obj: obj
                 })
             })
+        } else {
+            wx.connectSocket({
+                url: this.globalData.socketUrl + "?code=" + res.code,
+                header: {
+                    'content-type': 'application/json',
+                    'Authorization': null
+                }
+            })
+            this.sendSocketMsg(msg, obj)
         }
     },
     dowmloadAndOpenDocument: function (filePath) {
@@ -53,7 +69,7 @@ App({
                 wx.openDocument({
                     filePath: result.tempFilePath,
                     success: (res) => {
-                        
+
                     }
                 })
             },
@@ -63,7 +79,8 @@ App({
         userInfo: null,
         requestUrl: "https://www.wenlijie.com/",
         socketUrl: "wss://www.wenlijie.com/wss",
-        socketConnectStatus: false
+        socketConnectStatus: false,
+        userInfoServer: null
     },
     objectData: {
 

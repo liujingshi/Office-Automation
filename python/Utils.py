@@ -56,6 +56,20 @@ def sendMsg(tornadoSelf, msg, obj = ""):
     # logging.info("Send meaage to {0} => {1}".format(tornadoSelf.openid, message))
 
 
+# 得到自己的信息
+def getMyInfo(tornadoSelf):
+    dbData = Ljsmysql.table("user").where("open_id", tornadoSelf.openid).select()
+    if len(dbData) > 0:
+        sendMsg(tornadoSelf, "myUserinfo", dbData[0])
+
+
+# 得到用户信息
+def getUserinfo(tornadoSelf, obj):
+    dbData = Ljsmysql.table("user").where("user_id", obj['user_id']).select()
+    if len(dbData) > 0:
+        sendMsg(tornadoSelf, "userinfo", dbData[0])
+
+
 # 得到主页信息
 def getHome(tornadoSelf):
     openid = tornadoSelf.openid
@@ -399,3 +413,79 @@ def getThisCheckTask(tornadoSelf, obj):
         dbData += Ljsmysql.query(sql)
         if len(dbData) > 0:
             sendMsg(tornadoSelf, "thisCheckTask", dbData[0])
+
+
+# 添加好友
+def addFriend(tornadoSelf, obj):
+    openid = tornadoSelf.openid
+    user = Ljsmysql.table("user").where("open_id", openid).select()
+    if len(user) > 0:
+        userid = user[0]['user_id']
+        Ljsmysql.table("cont").insert({
+            "user_id": userid,
+            "cont_user_id": obj['friendid']
+        })
+        sendMsg(tornadoSelf, "addFriendSuccess")
+
+
+# 发送消息
+def sendMessage(tornadoSelf, obj, clients):
+    openid = tornadoSelf.openid
+    user = Ljsmysql.table("user").where("open_id", openid).select()
+    if len(user) > 0:
+        fromuserid = user[0]['user_id']
+        touser = Ljsmysql.table("user").where("user_id", obj['user_id']).select()
+        if len(touser) > 0:
+            toUserOpenid = touser[0]['open_id']
+            Ljsmysql.table("msg").insert({
+                "from_user_id": fromuserid,
+                "to_user_id": obj['user_id'],
+                "msg_text": obj['text'],
+                "msg_datetime": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            })
+            if toUserOpenid in clients.keys():
+                sendMsg(clients[toUserOpenid]['object'], "reMessage", obj['text'])
+            sendMsg(tornadoSelf, "sendMessageSuccess")
+        
+
+# 获取好友列表
+def getFriends(tornadoSelf):
+    openid = tornadoSelf.openid
+    user = Ljsmysql.table("user").where("open_id", openid).select()
+    if len(user) > 0:
+        userid = user[0]['user_id']
+        sql = "select * from cont, user where cont.cont_user_id = user.user_id and "
+        sql += "cont.user_id = {0} order by cont.cont_id desc".format(userid)
+        dbData = Ljsmysql.query(sql)
+        sendMsg(tornadoSelf, "friends", dbData)
+
+
+# 获取消息列表
+def getMessages(tornadoSelf):
+    openid = tornadoSelf.openid
+    user = Ljsmysql.table("user").where("open_id", openid).select()
+    if len(user) > 0:
+        userid = user[0]['user_id']
+        sql = "select user.user_name as name, user.user_head as head, msg.from_user_id as userid, count(msg.from_user_id) as num, max(msg.msg_datetime) as dt from msg, user "
+        sql += "where msg.to_user_id = {0} and msg.msg_read = 0 and ".format(userid)
+        sql += "user.user_id = msg.from_user_id "
+        sql += "group by msg.from_user_id order by dt desc"
+        dbData = Ljsmysql.query(sql)
+        sendMsg(tornadoSelf, "messages", dbData)
+
+
+# 获取所有消息
+def getAllMessage(tornadoSelf, obj):
+    openid = tornadoSelf.openid
+    user = Ljsmysql.table("user").where("open_id", openid).select()
+    if len(user) > 0:
+        userid = user[0]['user_id']
+        sql = "select * from msg, user where msg.from_user_id = user.user_id and "
+        sql += "((msg.from_user_id = {0} and msg.to_user_id = {1}) or (msg.from_user_id = {1} and msg.to_user_id = {0})) ".format(userid, obj['userid'])
+        sql += "order by msg.msg_datetime"
+        dbData = Ljsmysql.query(sql)
+        Ljsmysql.table("msg").where({
+            "from_user_id": obj['userid'],
+            "to_user_id": userid
+        }).update({"msg_read": 1})
+        sendMsg(tornadoSelf, "allMessage", dbData)

@@ -57,7 +57,9 @@ Page({
         let obj = data.obj;
         if (msg == "thisTask") {
             this.setData({
-                task: obj
+                task: obj,
+                text: obj.task_ok_text,
+                file_id: obj.task_ok_file_id
             })
         } else if (msg == "doTaskSuccess") {
             Toast.success("提交成功")

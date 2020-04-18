@@ -1,6 +1,6 @@
 {
-  "usingComponents": {
-    "mytree": "../components/mytree/mytree"
-  },
-  "navigationBarTitleText": "人员架构"
+    "usingComponents": {
+        "mytree": "../components/mytree/mytree"
+    },
+    "navigationBarTitleText": "人员架构"
 }

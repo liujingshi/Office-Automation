@@ -1,1 +1,4 @@
 /* pages/addpos/addpos.wxss */
+page {
+    background: #fff;
+}

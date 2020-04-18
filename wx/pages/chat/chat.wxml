@@ -1,0 +1,22 @@
+<!--pages/chat/chat.wxml-->
+<view class="main">
+	<view class="top">
+		<scroll-view scroll-into-view="{{now_id}}" class="all" scroll-y="true">
+			<view wx:for="{{message}}" id="M{{item.msg_id}}" class="item">
+				<van-divider dashed contentPosition="center">{{item.msg_datetime}}</van-divider>
+				<view class="cont {{user_id == item.from_user_id ? 'cont-left' : 'cont-right'}}">
+					<van-image class="head" round width="60px" height="60px" src="{{user_id == item.from_user_id ? item.user_head : userhead}}" />
+					<view class="text">{{item.msg_text}}</view>
+				</view>
+			</view>
+		</scroll-view>
+		<view class="block"></view>
+	</view>
+	<view class="foot">
+		<van-cell-group>
+			<van-field value="{{msg}}" bind:change="setMsg" center use-button-slot>
+				<van-button bind:click="send" slot="button" size="small" type="primary">发送</van-button>
+			</van-field>
+		</van-cell-group>
+	</view>
+</view>

@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view>
 	<view>
-		<van-card title="{{userInfo.nickName}}" thumb="{{userInfo.avatarUrl}}" />
+		<van-card bindtap="editUserinfo" title="{{userInfoServer.user_name}}" thumb="{{userInfo.avatarUrl}}" />
 	</view>
 	<view>
 		<van-notice-bar left-icon="volume-o" text="{{newInfo}}" />

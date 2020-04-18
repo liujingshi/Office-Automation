@@ -3,8 +3,8 @@
 	<view wx:for="{{users}}" class="panel-item">
 		<van-card desc="{{item.pos_name}}" title="{{item.user_name}}" thumb="{{item.user_head}}">
 			<view slot="footer">
-				<van-button size="mini" type="info">加为好友</van-button>
-				<van-button size="mini" type="danger">修改信息</van-button>
+				<van-button data-userid="{{item.user_id}}" bind:click="addFriend" size="mini" type="info">加为好友</van-button>
+				<van-button wx:if="{{power > 1}}" data-userid="{{item.user_id}}" bind:click="editUserinfo" size="mini" type="danger">修改信息</van-button>
 			</view>
 		</van-card>
 	</view>

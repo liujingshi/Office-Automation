@@ -1,2 +1,6 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view>
+	<view wx:for="{{message}}" class="panel-item">
+		<van-card bindtap="chat" data-userid="{{item.userid}}" desc="{{item.dt}}" tag="{{item.num}}" title="{{item.name}}" thumb="{{item.head}}" />
+	</view>
+</view>
